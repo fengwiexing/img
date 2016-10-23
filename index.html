@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <link href="css/gLightboxStyle.css" rel="stylesheet" />
+</head>
+<body>
+
+    <!--data-lightbox-title图片的标题
+    data-lightbox-id图片的唯一ID
+    data-lightbox-groups图片的分组
+    data-lightbox-src显示的大图片
+    enabled-lightbox启用lightbox插件-->
+    <br/>
+    <h2>第1组图片，点击图片查看大图，</h2>
+    <img class="enabled-lightbox" 
+         data-lightbox-title="我是美女" 
+         data-lightbox-src="新文件夹1/1-6.jpg" 
+         data-lightbox-id="fa" 
+         data-lightbox-groups="groups-1"  
+         src="新文件夹1/1-6.jpg" width="100" height="100" />
+
+    <img class="enabled-lightbox" 
+         data-lightbox-title="我是小图图" 
+         data-lightbox-src="新文件夹1/2-1.jpg" 
+         data-lightbox-id="fa2" 
+         data-lightbox-groups="groups-1" 
+         src="新文件夹1/2-1.jpg" width="100" height="100"/>
+
+    <img class="enabled-lightbox" 
+         data-lightbox-title="我是超级跑车" 
+         data-lightbox-src="新文件夹1/2-2.jpg" 
+         data-lightbox-id="fa3" 
+         data-lightbox-groups="groups-1" 
+         src="新文件夹1/2-2.jpg" width="100" height="100"/>
+
+    <br /><br />
+    <h2>第2组图片</h2>
+    <img class="enabled-lightbox" 
+         data-lightbox-title="我是超级豪车" 
+         data-lightbox-src="新文件夹1/2-3.jpg" 
+         data-lightbox-id="fa49" 
+         data-lightbox-groups="groups-2" 
+         src="新文件夹1/2-3.jpg" width="100" height="100"/>
+    <br /><br />
+    <h2>第3组图片</h2>
+    <img class="enabled-lightbox"
+         data-lightbox-title="我是超级豪车"
+         data-lightbox-src="新文件夹1/3-3.jpg"
+         data-lightbox-id="31"
+         data-lightbox-groups="groups-3"
+         src="新文件夹1/3-3.jpg" width="100" height="100" />
+    <img class="enabled-lightbox"
+         data-lightbox-title="我是超级豪车"
+         data-lightbox-src="新文件夹1/2-6.jpg"
+         data-lightbox-id="32"
+         data-lightbox-groups="groups-3"
+         src="新文件夹1/2-6.jpg" width="100" height="100" />
+    <img class="enabled-lightbox"
+         data-lightbox-title="我是超级豪车"
+         data-lightbox-src="新文件夹1/3-1.jpg"
+         data-lightbox-id="33"
+         data-lightbox-groups="groups-3"
+         src="新文件夹1/3-1.jpg" width="100" height="100" />
+    <img class="enabled-lightbox"
+         data-lightbox-title="我是超级豪车"
+         data-lightbox-src="新文件夹1/3-2.jpg"
+         data-lightbox-id="34"
+         data-lightbox-groups="groups-3"
+         src="新文件夹1/3-2.jpg" width="100" height="100" />
+
+
+    <br /><br />
+    <div style="background:red; position:relative;">
+       <div style="width:50%;height:50%;border:1px solid #000000; position:absolute; right:0;">
+           父素没有设置有宽高，但子素的宽高设置为%比的单位也起作用了，是因为父素被撑大了，而且子元素也要设置为绝对定位才行
+       </div>
+        <div style="width:130px;height:333px; background:#ffd800">fffffffffff</div>
+    </div>
+    <div>
+        <p>saff</p>
+      
+
+        <p>saff</p>
+        <p>saff</p>
+
+        <p>saff</p>
+        <p>saff</p>
+        v
+        <p>saff</p>
+        <p>saff</p>
+        <p>saff</p>
+
+
+        <p>saff</p>
+        <p>saff</p>
+
+        <p>saff</p>
+        <p>saff</p>
+
+        <p>saff</p>
+        <p>saff</p>
+        v
+        <p>saff</p>
+        <p>saff</p>
+        <p>saff</p>
+        <p>saff</p>
+        <p>saff</p>
+
+        <p>saff</p>
+        <p>saff</p>
+
+        <p>saff</p>
+        <p>saff</p>
+        v
+        <p>saff</p>
+        <p>saff</p>
+        <p>saff</p>
+    </div>
+    <script src="JS/jquery-1-11-1.js"></script>
+    <script src="JS/gLightbox.js"></script>
+    <script>
+        $(function () {
+            new gLightbox({
+                popupSpeed: 300,//弹窗的速度
+                showSpeed: 300,//显示图片速度
+                fadeOutSpeed: 300,//隐藏图片速度
+            });
+        })
+    </script>
+</body>
+</html>
