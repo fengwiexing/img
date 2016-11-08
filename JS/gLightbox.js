@@ -22,7 +22,7 @@
         gLightbox.prototype = {
             //初始化数据
             init: function () {
-                this.Glightboxmask = $('<div id="G-lightbox-mask" ></div>');
+                this.Glightboxmask = $('<div id="G-lightbox-mask" ></div>');//蒙板
                 var createEle = $(
                        ' <div id="G-lightbox-popup"> ' +
                          ' <div class="G-lightbox-view">' +
@@ -31,30 +31,30 @@
                              ' <a href="javascript:" class="G-lightbox-btn G-lightbox-next "></a>' +
                          ' </div>' +
                           '<div class="G-lightbox-caption">' +
-                           '   <p class="G-lightbox-imags-title">图片的描述 fdvsvs  s   </p>' +
+                           '   <p class="G-lightbox-imags-title">图片的描述</p>' +
                             '  <p class="G-lightbox-imags-index">当前图片的索引：0 共 4 张</p>' +
                             '  <span class="G-lightbox-close"></span>' +
                          ' </div>' +
                      ' </div> '
-                    );
-                $('body').append(this.Glightboxmask, createEle);
+                    );//整个弹窗
+                $('body').append(this.Glightboxmask, createEle);//把蒙板的 弹窗增加到body；
                 this.winHeight = $(window).height();
 
-                this.popup = $("#G-lightbox-popup");
-                this.imags = $(".G-lightbox-imags");
-                this.prev = $(".G-lightbox-prev");
-                this.next = $(".G-lightbox-next");
+                this.popup = $("#G-lightbox-popup");//弹窗
+                this.imags = $(".G-lightbox-imags");//图片
+                this.prev = $(".G-lightbox-prev");//左按钮
+                this.next = $(".G-lightbox-next");//右按钮
                 this.caption = $(".G-lightbox-caption");
-                this.imagsTitle = $(".G-lightbox-imags-title");
-                this.showIndex = $(".G-lightbox-imags-index");
-                this.close = $(".G-lightbox-close");
+                this.imagsTitle = $(".G-lightbox-imags-title");//图片标题
+                this.showIndex = $(".G-lightbox-imags-index");//图片索引
+                this.close = $(".G-lightbox-close");//关闭按钮
             },
             //获取要启用lightbox的图片
             getData: function () {
                 var self = this;
                 self.enabledLightboxImags = [];
 
-                $(".enabled-lightbox").click(function () {
+                $(".enabled-lightbox").click(function () {//绑定页面图片点击事件
                     self.imagsID = $(this).attr('data-lightbox-id');
                     var groups = $(this).attr('data-lightbox-groups');
 
@@ -62,7 +62,7 @@
 
                         self.enabledLightboxImags.length = 0;
                         $(".enabled-lightbox").each(function () {
-                            if ($(this).attr('data-lightbox-groups') == groups) {
+                            if ($(this).attr('data-lightbox-groups') == groups) {//获取同一组的图片
                                 self.enabledLightboxImags.push({
                                     ImagsTitle: $(this).attr('data-lightbox-title'),
                                     ImagsSrc: $(this).attr('data-lightbox-src'),
